@@ -2,7 +2,11 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 import java.util.Arrays;
-import static hexlet.code.Engine.*;
+
+import static hexlet.code.Engine.checkAnswer;
+import static hexlet.code.Engine.rnd;
+import static hexlet.code.Engine.scan;
+import static hexlet.code.Engine.userName;
 
 public class Calc {
 
@@ -28,6 +32,8 @@ public class Calc {
             case ("+") -> calcAnswer = firstNumber + secondNumber;
             case ("-") -> calcAnswer = firstNumber - secondNumber;
             case ("*") -> calcAnswer = firstNumber * secondNumber;
+            default -> {
+            }
         }
         System.out.printf("Question: %d %s %d%n", firstNumber, operationalSign, secondNumber);
         System.out.print("Your answer: ");

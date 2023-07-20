@@ -1,7 +1,11 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-import static hexlet.code.Engine.*;
+
+import static hexlet.code.Engine.checkAnswer;
+import static hexlet.code.Engine.rnd;
+import static hexlet.code.Engine.scan;
+import static hexlet.code.Engine.userName;
 
 
 public class Even {

@@ -5,7 +5,11 @@ import hexlet.code.Engine;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import static hexlet.code.Engine.*;
+import static hexlet.code.Engine.checkAnswer;
+import static hexlet.code.Engine.rnd;
+import static hexlet.code.Engine.scan;
+import static hexlet.code.Engine.userName;
+
 public class Prime {
 
     public static void playPrime() {

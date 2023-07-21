@@ -6,7 +6,6 @@ import static hexlet.code.Engine.checkAnswer;
 import static hexlet.code.Engine.rnd;
 import static hexlet.code.Engine.scan;
 import static hexlet.code.Engine.userName;
-import static java.util.Arrays.binarySearch;
 
 public class Prime {
 
@@ -22,9 +21,17 @@ public class Prime {
     }
 
     public static String askPrimeQuestion() {
-        int[] primeArray = {2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97};
         int hiddenNumber = rnd.nextInt(100);
         System.out.printf("Question: %d%nYour answer: ", hiddenNumber);
-        return binarySearch(primeArray, hiddenNumber) >= 0 ? "yes" : "no";
+        return isPrime(hiddenNumber) ? "yes" : "no";
+    }
+
+    private static boolean isPrime(int x) {
+        for (int i = 2; i <= Math.sqrt(x); i++) {
+            if (x % i == 0) {
+                return false;
+            }
+        }
+        return true;
     }
 }

@@ -12,7 +12,7 @@ public class Prime {
 
     public static void playPrime() {
         Engine.greetingUser();
-        Engine.printGameRules("GCD");
+        Engine.printGameRules("Prime");
         for (int i = 0; i < 3; i++) {
             String correctAnswer = askPrimeQuestion();
             String userAnswer = scan.nextLine();

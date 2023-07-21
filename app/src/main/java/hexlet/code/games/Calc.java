@@ -3,15 +3,13 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import java.util.Arrays;
 
-import static hexlet.code.Engine.rnd;
-
 public class Calc {
 
     public static String askCalcQuestion() {
         var signsArray = Arrays.asList("+", "-", "*");
-        var operationalSign = signsArray.get(rnd.nextInt(signsArray.size()));
-        int firstNumber = rnd.nextInt(Engine.SUPREMUM);
-        int secondNumber = rnd.nextInt(Engine.SUPREMUM);
+        var operationalSign = signsArray.get(Engine.getRandomNumber(signsArray.size()));
+        int firstNumber = Engine.getRandomNumber(Engine.SUPREMUM);
+        int secondNumber = Engine.getRandomNumber(Engine.SUPREMUM);
         int calcAnswer = 0;
 
         calcAnswer = switch (operationalSign) {

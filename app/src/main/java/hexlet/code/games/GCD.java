@@ -2,13 +2,11 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import static hexlet.code.Engine.rnd;
-
 public class GCD {
 
     public static String askGCDQuestion() {
-        int a = rnd.nextInt(1, Engine.SUPREMUM);
-        int b = rnd.nextInt(1, Engine.SUPREMUM);
+        int a = Engine.getRandomNumber(1, Engine.SUPREMUM);
+        int b = Engine.getRandomNumber(1, Engine.SUPREMUM);
         System.out.printf("Question: %d %d%nYour answer: ", a, b);
         return computeGCD(a, b);
     }

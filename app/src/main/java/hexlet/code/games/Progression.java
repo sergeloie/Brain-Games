@@ -1,6 +1,6 @@
 package hexlet.code.games;
 
-import static hexlet.code.Engine.rnd;
+import hexlet.code.Engine;
 
 public class Progression {
 
@@ -10,9 +10,9 @@ public class Progression {
         final int incMax = 5;
         final int beginMin = 10;
         final int beginMax = 30;
-        int gap = rnd.nextInt(0, sizeSequence - 1);
-        int increment = rnd.nextInt(incMin, incMax);
-        int begin = rnd.nextInt(beginMin, beginMax);
+        int gap = Engine.getRandomNumber(0, sizeSequence - 1);
+        int increment = Engine.getRandomNumber(incMin, incMax);
+        int begin = Engine.getRandomNumber(beginMin, beginMax);
         int[] progArray = new int[sizeSequence];
         System.out.print("Question:");
         for (int i = 0; i < sizeSequence; i++) {

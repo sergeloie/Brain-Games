@@ -12,7 +12,7 @@ public class GCD {
     public static void playGCD() {
 
         Engine.greetingUser();
-        System.out.println("Find the greatest common divisor of given numbers.");
+        Engine.printGameRules("GCD");
         for (int i = 0; i < 3; i++) {
             String correctAnswer = askGCDQuestion();
             String userAnswer = scan.nextLine();

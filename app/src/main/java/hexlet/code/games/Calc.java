@@ -12,7 +12,7 @@ public class Calc {
 
     public static void playCalc() {
         Engine.greetingUser();
-        System.out.println("What is the result of the expression?");
+        Engine.printGameRules("Calc");
         for (int i = 0; i < 3; i++) {
             String correctAnswer = askCalcQuestion();
             String userAnswer = scan.nextLine();

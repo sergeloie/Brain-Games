@@ -26,6 +26,18 @@ public class Engine {
         }
     }
 
+    public static void printGameRules(String gameName) {
+        String gameRule = switch (gameName) {
+            case ("Even") -> "Answer 'yes' if the number is even, otherwise answer 'no'.";
+            case ("Calc") -> "What is the result of the expression?";
+            case ("GCD") -> "Find the greatest common divisor of given numbers.";
+            case ("Progression") -> "What number is missing in the progression?";
+            case ("Prime") -> "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+            default -> "";
+        };
+        System.out.println(gameRule);
+    }
+
 
 
 

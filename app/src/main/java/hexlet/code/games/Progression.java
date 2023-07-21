@@ -2,13 +2,17 @@ package hexlet.code.games;
 
 
 import hexlet.code.Engine;
-import static hexlet.code.Engine.*;
+
+import static hexlet.code.Engine.checkAnswer;
+import static hexlet.code.Engine.rnd;
+import static hexlet.code.Engine.scan;
+import static hexlet.code.Engine.userName;
 
 public class Progression {
 
     public static void playProgression() {
         Engine.greetingUser();
-        System.out.println("What number is missing in the progression?");
+        Engine.printGameRules("Progression");
         for (int i = 0; i < 3; i++) {
             String correctAnswer = askProgQuestion();
             String userAnswer = scan.nextLine();

@@ -13,7 +13,7 @@ public class Even {
     public static void playEven() {
 
         Engine.greetingUser();
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
+        Engine.printGameRules("Even");
         for (int i = 0; i < 3; i++) {
             String correctAnswer = askEvenQuestion();
             String userAnswer = scan.nextLine();

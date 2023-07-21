@@ -8,6 +8,8 @@ public class Engine {
     public static Scanner scan = new Scanner(System.in);
     public static Random rnd = new Random();
     public static String userName = "";
+    public static int numberOfRounds = 3;
+    public static int supremum = 100;
 
     public static void greetingUser() {
         System.out.println("Welcome to the Brain Games!");

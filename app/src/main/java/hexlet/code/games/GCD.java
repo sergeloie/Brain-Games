@@ -13,7 +13,7 @@ public class GCD {
 
         Engine.greetingUser();
         Engine.printGameRules("GCD");
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < Engine.numberOfRounds; i++) {
             String correctAnswer = askGCDQuestion();
             String userAnswer = scan.nextLine();
             checkAnswer(userAnswer, correctAnswer);
@@ -22,8 +22,8 @@ public class GCD {
     }
 
     public static String askGCDQuestion() {
-        int a = rnd.nextInt(1, 100);
-        int b = rnd.nextInt(1, 100);
+        int a = rnd.nextInt(1, Engine.supremum);
+        int b = rnd.nextInt(1, Engine.supremum);
         System.out.printf("Question: %d %d%nYour answer: ", a, b);
         return computeGCD(a, b);
     }

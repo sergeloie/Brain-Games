@@ -13,7 +13,7 @@ public class Progression {
     public static void playProgression() {
         Engine.greetingUser();
         Engine.printGameRules("Progression");
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < Engine.numberOfRounds; i++) {
             String correctAnswer = askProgQuestion();
             String userAnswer = scan.nextLine();
             checkAnswer(userAnswer, correctAnswer);
@@ -23,9 +23,13 @@ public class Progression {
 
     public static String askProgQuestion() {
         int sizeSequence = 10;
+        int incMin = 1;
+        int incMax = 5;
+        int beginMin = 10;
+        int beginMax = 30;
         int gap = rnd.nextInt(0, sizeSequence - 1);
-        int increment = rnd.nextInt(1, 5);
-        int begin = rnd.nextInt(10, 30);
+        int increment = rnd.nextInt(incMin, incMax);
+        int begin = rnd.nextInt(beginMin, beginMax);
         int[] progArray = new int[sizeSequence];
         System.out.print("Question:");
         for (int i = 0; i < sizeSequence; i++) {

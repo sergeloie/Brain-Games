@@ -14,7 +14,7 @@ public class Even {
 
         Engine.greetingUser();
         Engine.printGameRules("Even");
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < Engine.numberOfRounds; i++) {
             String correctAnswer = askEvenQuestion();
             String userAnswer = scan.nextLine();
             checkAnswer(userAnswer, correctAnswer);
@@ -24,7 +24,7 @@ public class Even {
 
     public static String askEvenQuestion() {
 
-        int x = rnd.nextInt(100);
+        int x = rnd.nextInt(Engine.supremum);
         boolean evenCheck = (x % 2 == 0);
         System.out.println("Question: " + x);
         System.out.print("Your answer: ");

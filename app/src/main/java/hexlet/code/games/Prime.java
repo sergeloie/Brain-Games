@@ -12,7 +12,7 @@ public class Prime {
     public static void playPrime() {
         Engine.greetingUser();
         Engine.printGameRules("Prime");
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < Engine.numberOfRounds; i++) {
             String correctAnswer = askPrimeQuestion();
             String userAnswer = scan.nextLine();
             checkAnswer(userAnswer, correctAnswer);
@@ -21,7 +21,7 @@ public class Prime {
     }
 
     public static String askPrimeQuestion() {
-        int hiddenNumber = rnd.nextInt(100);
+        int hiddenNumber = rnd.nextInt(Engine.supremum);
         System.out.printf("Question: %d%nYour answer: ", hiddenNumber);
         return isPrime(hiddenNumber) ? "yes" : "no";
     }

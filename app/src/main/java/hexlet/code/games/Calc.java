@@ -13,7 +13,7 @@ public class Calc {
     public static void playCalc() {
         Engine.greetingUser();
         Engine.printGameRules("Calc");
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < Engine.numberOfRounds; i++) {
             String correctAnswer = askCalcQuestion();
             String userAnswer = scan.nextLine();
             checkAnswer(userAnswer, correctAnswer);
@@ -24,17 +24,16 @@ public class Calc {
     public static String askCalcQuestion() {
         var signsArray = Arrays.asList("+", "-", "*");
         var operationalSign = signsArray.get(rnd.nextInt(signsArray.size()));
-        int firstNumber = rnd.nextInt(100);
-        int secondNumber = rnd.nextInt(100);
+        int firstNumber = rnd.nextInt(Engine.supremum);
+        int secondNumber = rnd.nextInt(Engine.supremum);
         int calcAnswer = 0;
 
-        switch (operationalSign) {
-            case ("+") -> calcAnswer = firstNumber + secondNumber;
-            case ("-") -> calcAnswer = firstNumber - secondNumber;
-            case ("*") -> calcAnswer = firstNumber * secondNumber;
-            default -> {
-            }
-        }
+        calcAnswer = switch (operationalSign) {
+            case ("+") -> firstNumber + secondNumber;
+            case ("-") -> firstNumber - secondNumber;
+            case ("*") -> firstNumber * secondNumber;
+            default -> throw new IllegalStateException("Unexpected value: " + operationalSign);
+        };
         System.out.printf("Question: %d %s %d%n", firstNumber, operationalSign, secondNumber);
         System.out.print("Your answer: ");
         return String.valueOf(calcAnswer);

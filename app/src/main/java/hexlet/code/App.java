@@ -1,11 +1,5 @@
 package hexlet.code;
 
-import hexlet.code.games.Calc;
-import hexlet.code.games.Even;
-import hexlet.code.games.GCD;
-import hexlet.code.games.Prime;
-import hexlet.code.games.Progression;
-
 import java.util.Scanner;
 
 public class App {
@@ -25,11 +19,11 @@ public class App {
 
         switch (userChoice) {
             case "1" -> Cli.greetings();
-            case "2" -> Even.playEven();
-            case "3" -> Calc.playCalc();
-            case "4" -> GCD.playGCD();
-            case "5" -> Progression.playProgression();
-            case "6" -> Prime.playPrime();
+            case "2" -> Engine.playChosenGame("Even");
+            case "3" -> Engine.playChosenGame("Calc");
+            case "4" -> Engine.playChosenGame("GCD");
+            case "5" -> Engine.playChosenGame("Progression");
+            case "6" -> Engine.playChosenGame("Prime");
             default -> {
             }
         }

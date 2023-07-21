@@ -5,11 +5,11 @@ import java.util.Random;
 
 public class Engine {
 
-    public static Scanner scan = new Scanner(System.in);
+    private static Scanner scan = new Scanner(System.in);
     public static Random rnd = new Random();
-    public static String userName = "";
-    public static int numberOfRounds = 3;
-    public static int supremum = 100;
+    private static String userName = "";
+    private static final int NUMBER_OF_ROUNDS = 3;
+    public static final int SUPREMUM = 100;
 
     public static void greetingUser() {
         System.out.println("Welcome to the Brain Games!");
@@ -40,8 +40,27 @@ public class Engine {
         System.out.println(gameRule);
     }
 
-
-
-
-
+    public static void playChosenGame(String chosenGame) {
+        greetingUser();
+        printGameRules(chosenGame);
+        for (int i = 0; i < Engine.NUMBER_OF_ROUNDS; i++) {
+            String correctAnswer = switch (chosenGame) {
+                case ("Even") -> hexlet.code.games.Even.askEvenQuestion();
+                case ("Calc") -> hexlet.code.games.Calc.askCalcQuestion();
+                case ("GCD") -> hexlet.code.games.GCD.askGCDQuestion();
+                case ("Progression") -> hexlet.code.games.Progression.askProgQuestion();
+                case ("Prime") -> hexlet.code.games.Prime.askPrimeQuestion();
+                default -> throw new IllegalStateException("Unexpected value: " + chosenGame);
+            };
+            String userAnswer = scan.nextLine();
+            checkAnswer(userAnswer, correctAnswer);
+        }
+        System.out.printf("Congratulations, %s!%n", userName);
+    }
 }
+
+
+
+
+
+

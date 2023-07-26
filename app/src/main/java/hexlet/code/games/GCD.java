@@ -9,10 +9,10 @@ public class GCD {
         int a = Utils.getRandomNumber(1, Engine.SUPREMUM);
         int b = Utils.getRandomNumber(1, Engine.SUPREMUM);
         System.out.printf("Question: %d %d%nYour answer: ", a, b);
-        return computeGCD(a, b);
+        return String.valueOf(computeGCD(a, b));
     }
 
-    private static String computeGCD(int x, int y) {
+    private static int computeGCD(int x, int y) {
         int m = Math.max(x, y);
         int n = Math.min(x, y);
         while (m % n != 0) {
@@ -20,7 +20,7 @@ public class GCD {
             m = n;
             n = r;
         }
-        return String.valueOf(n);
+        return n;
     }
 
 

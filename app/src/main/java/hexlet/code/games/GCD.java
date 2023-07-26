@@ -3,7 +3,7 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Utils;
 
-public class GCD {
+public class GCD implements Game{
 
     public static String askGCDQuestion() {
         int a = Utils.getRandomNumber(1, Engine.SUPREMUM);
@@ -24,4 +24,16 @@ public class GCD {
     }
 
 
+    @Override
+    public String getRules() {
+        return "Find the greatest common divisor of given numbers.";
+    }
+
+    @Override
+    public String getQuestionAndAnswer() {
+        int a = Utils.getRandomNumber(1, Engine.SUPREMUM);
+        int b = Utils.getRandomNumber(1, Engine.SUPREMUM);
+        System.out.printf("Question: %d %d%nYour answer: ", a, b);
+        return String.valueOf(computeGCD(a, b));
+    }
 }

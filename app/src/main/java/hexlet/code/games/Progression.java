@@ -20,7 +20,10 @@ public class Progression {
         for (int i = 0; i < sizeSequence; i++) {
             progArray[i] = begin + increment * i;
             if (i == gap) stringProg.append(" ..");
-            else stringProg.append(" " + progArray[i]);
+            else {
+                stringProg.append(" ");
+                stringProg.append(progArray[i]);
+            }
         }
         stringProg.append("%n");
         stringProg.append("Your answer: ");

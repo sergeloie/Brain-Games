@@ -1,5 +1,6 @@
 package hexlet.code;
 
+import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
 import hexlet.code.games.GCD;
 import hexlet.code.games.Game;
@@ -69,6 +70,7 @@ public class Engine {
         System.out.println("Hello, " + userName);
         Game game1 = switch (idGame) {
             case (2) -> new Even();
+            case (3) -> new Calc();
             case (4) -> new GCD();
             default -> throw new IllegalStateException("Unexpected value: " + idGame);
         } ;

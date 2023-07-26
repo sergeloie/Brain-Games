@@ -3,13 +3,7 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Utils;
 
-public class Prime {
-
-    public static String askPrimeQuestion() {
-        int hiddenNumber = Utils.getRandomNumber(Engine.SUPREMUM);
-        System.out.printf("Question: %d%nYour answer: ", hiddenNumber);
-        return isPrime(hiddenNumber) ? "yes" : "no";
-    }
+public class Prime implements Game {
 
     private static boolean isPrime(int x) {
         if (x < 2) {
@@ -21,5 +15,17 @@ public class Prime {
             }
         }
         return true;
+    }
+
+    @Override
+    public String getRules() {
+        return "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+    }
+
+    @Override
+    public String getQuestionAndAnswer() {
+        int hiddenNumber = Utils.getRandomNumber(Engine.SUPREMUM);
+        System.out.printf("Question: %d%nYour answer: ", hiddenNumber);
+        return isPrime(hiddenNumber) ? "yes" : "no";
     }
 }

@@ -9,5 +9,6 @@ public class Cli {
         System.out.print("May I have your name? ");
         String nameUser = sc.nextLine();
         System.out.printf("Hello, %s!", nameUser);
+        System.exit(0);
     }
 }

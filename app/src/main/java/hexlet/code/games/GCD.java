@@ -3,14 +3,7 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Utils;
 
-public class GCD implements Game{
-
-    public static String askGCDQuestion() {
-        int a = Utils.getRandomNumber(1, Engine.SUPREMUM);
-        int b = Utils.getRandomNumber(1, Engine.SUPREMUM);
-        System.out.printf("Question: %d %d%nYour answer: ", a, b);
-        return String.valueOf(computeGCD(a, b));
-    }
+public class GCD implements Game {
 
     private static int computeGCD(int x, int y) {
         int m = Math.max(x, y);
@@ -22,7 +15,6 @@ public class GCD implements Game{
         }
         return n;
     }
-
 
     @Override
     public String getRules() {

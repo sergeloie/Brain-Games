@@ -6,17 +6,12 @@ import java.util.Random;
 public class Engine {
 
     private static Scanner scan = new Scanner(System.in);
-    private static Random rnd = new Random();
+
     private static String userName = "";
     private static final int NUMBER_OF_ROUNDS = 3;
     public static final int SUPREMUM = 100;
 
-    public static int getRandomNumber(int begin, int end) {
-        return rnd.nextInt(begin, end);
-    }
-    public static int getRandomNumber(int end) {
-        return rnd.nextInt(0, end);
-    }
+
 
     public static void greetingUser() {
         System.out.println("Welcome to the Brain Games!");

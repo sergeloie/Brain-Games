@@ -1,11 +1,12 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class Prime {
 
     public static String askPrimeQuestion() {
-        int hiddenNumber = Engine.getRandomNumber(Engine.SUPREMUM);
+        int hiddenNumber = Utils.getRandomNumber(Engine.SUPREMUM);
         System.out.printf("Question: %d%nYour answer: ", hiddenNumber);
         return isPrime(hiddenNumber) ? "yes" : "no";
     }

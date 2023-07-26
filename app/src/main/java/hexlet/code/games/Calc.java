@@ -1,15 +1,16 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 import java.util.Arrays;
 
 public class Calc {
 
     public static String askCalcQuestion() {
         var signsArray = Arrays.asList("+", "-", "*");
-        var operationalSign = signsArray.get(Engine.getRandomNumber(signsArray.size()));
-        int firstNumber = Engine.getRandomNumber(Engine.SUPREMUM);
-        int secondNumber = Engine.getRandomNumber(Engine.SUPREMUM);
+        var operationalSign = signsArray.get(Utils.getRandomNumber(signsArray.size()));
+        int firstNumber = Utils.getRandomNumber(Engine.SUPREMUM);
+        int secondNumber = Utils.getRandomNumber(Engine.SUPREMUM);
         int calcAnswer = 0;
 
         calcAnswer = switch (operationalSign) {

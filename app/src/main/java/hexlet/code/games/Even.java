@@ -1,12 +1,13 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class Even {
 
     public static String askEvenQuestion() {
 
-        int x = Engine.getRandomNumber(Engine.SUPREMUM);
+        int x = Utils.getRandomNumber(Engine.SUPREMUM);
         boolean evenCheck = (x % 2 == 0);
         System.out.println("Question: " + x);
         System.out.print("Your answer: ");

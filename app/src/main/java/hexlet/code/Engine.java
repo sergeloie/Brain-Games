@@ -12,14 +12,6 @@ public class Engine {
     public static final int SUPREMUM = 100;
 
 
-
-    public static void greetingUser() {
-        System.out.println("Welcome to the Brain Games!");
-        System.out.print("May I have your name? ");
-        userName = scan.nextLine();
-        System.out.println("Hello, " + userName);
-    }
-
     public static void checkAnswer(String userAnswer, String correctAnswer) {
         if (userAnswer.equals(correctAnswer)) {
             System.out.println("Correct!");
@@ -43,7 +35,10 @@ public class Engine {
     }
 
     public static void playChosenGame(String chosenGame) {
-        greetingUser();
+        System.out.println("Welcome to the Brain Games!");
+        System.out.print("May I have your name? ");
+        userName = scan.nextLine();
+        System.out.println("Hello, " + userName);
         printGameRules(chosenGame);
         for (int i = 0; i < Engine.NUMBER_OF_ROUNDS; i++) {
             String correctAnswer = switch (chosenGame) {

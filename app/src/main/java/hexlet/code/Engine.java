@@ -1,9 +1,6 @@
 package hexlet.code;
 
-import hexlet.code.games.Calc;
-import hexlet.code.games.Even;
-import hexlet.code.games.GCD;
-import hexlet.code.games.Game;
+import hexlet.code.games.*;
 
 import java.util.Scanner;
 import java.util.Random;
@@ -72,6 +69,7 @@ public class Engine {
             case (2) -> new Even();
             case (3) -> new Calc();
             case (4) -> new GCD();
+            case (5) -> new Progression();
             default -> throw new IllegalStateException("Unexpected value: " + idGame);
         } ;
         System.out.println(game1.getRules());

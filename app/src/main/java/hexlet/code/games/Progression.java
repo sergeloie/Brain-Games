@@ -11,17 +11,20 @@ public class Progression {
         final int incMax = 5;
         final int beginMin = 10;
         final int beginMax = 30;
+        var stringProg = new StringBuilder();
         int gap = Utils.getRandomNumber(0, sizeSequence - 1);
         int increment = Utils.getRandomNumber(incMin, incMax);
         int begin = Utils.getRandomNumber(beginMin, beginMax);
         int[] progArray = new int[sizeSequence];
-        System.out.print("Question:");
+        stringProg.append("Question:");
         for (int i = 0; i < sizeSequence; i++) {
             progArray[i] = begin + increment * i;
-            System.out.print(i == gap ? " .." : " " + progArray[i]);
+            if (i == gap) stringProg.append(" ..");
+            else stringProg.append(" " + progArray[i]);
         }
-        System.out.println();
-        System.out.print("Your answer: ");
+        stringProg.append("%n");
+        stringProg.append("Your answer: ");
+        System.out.printf(stringProg.toString());
         return String.valueOf(progArray[gap]);
     }
 }

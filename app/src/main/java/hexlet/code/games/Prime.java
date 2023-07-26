@@ -17,12 +17,12 @@ public class Prime implements Game {
         return true;
     }
 
-    @Override
+
     public String getRules() {
         return "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     }
 
-    @Override
+
     public String getQuestionAndAnswer() {
         int hiddenNumber = Utils.getRandomNumber(Engine.SUPREMUM);
         System.out.printf("Question: %d%nYour answer: ", hiddenNumber);

@@ -16,12 +16,12 @@ public class GCD implements Game {
         return n;
     }
 
-    @Override
+
     public String getRules() {
         return "Find the greatest common divisor of given numbers.";
     }
 
-    @Override
+
     public String getQuestionAndAnswer() {
         int a = Utils.getRandomNumber(1, Engine.SUPREMUM);
         int b = Utils.getRandomNumber(1, Engine.SUPREMUM);

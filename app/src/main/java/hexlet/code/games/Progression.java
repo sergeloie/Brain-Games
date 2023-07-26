@@ -5,12 +5,12 @@ import hexlet.code.Utils;
 public class Progression implements Game {
 
 
-    @Override
+
     public String getRules() {
         return "What number is missing in the progression?";
     }
 
-    @Override
+
     public String getQuestionAndAnswer() {
         final int sizeSequence = 10;
         final int incMin = 1;

@@ -7,12 +7,12 @@ import java.util.Arrays;
 public class Calc implements Game {
 
 
-    @Override
+
     public String getRules() {
         return "What is the result of the expression?";
     }
 
-    @Override
+
     public String getQuestionAndAnswer() {
         var signsArray = Arrays.asList("+", "-", "*");
         var operationalSign = signsArray.get(Utils.getRandomNumber(signsArray.size()));

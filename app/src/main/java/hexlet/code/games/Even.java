@@ -19,9 +19,5 @@ public class Even implements Game {
         return evenCheck ? "yes" : "no";
     }
 
-    public void playGame() {
-
-
-    }
 }
 

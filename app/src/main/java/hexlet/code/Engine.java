@@ -11,9 +11,8 @@ import java.util.Scanner;
 
 public class Engine {
 
-    private static Scanner scan = new Scanner(System.in);
+    private static final Scanner scan = new Scanner(System.in);
     private static String userName;
-    public int idGame;
     private static final int NUMBER_OF_ROUNDS = 3;
     public static final int SUPREMUM = 100;
 

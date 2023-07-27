@@ -18,11 +18,19 @@ public class Prime implements Game {
     }
 
 
+    /**
+     * @return возвращает правила игры
+     */
+    @Override
     public String getRules() {
         return "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     }
 
 
+    /**
+     * @return задаёт вопрос игры и возвращает строку с ответом
+     */
+    @Override
     public String getQuestionAndAnswer() {
         int hiddenNumber = Utils.getRandomNumber(Engine.SUPREMUM);
         System.out.printf("Question: %d%nYour answer: ", hiddenNumber);

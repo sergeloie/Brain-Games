@@ -17,11 +17,19 @@ public class GCD implements Game {
     }
 
 
+    /**
+     * @return возвращает правила игры
+     */
+    @Override
     public String getRules() {
         return "Find the greatest common divisor of given numbers.";
     }
 
 
+    /**
+     * @return задаёт вопрос игры и возвращает строку с ответом
+     */
+    @Override
     public String getQuestionAndAnswer() {
         int a = Utils.getRandomNumber(1, Engine.SUPREMUM);
         int b = Utils.getRandomNumber(1, Engine.SUPREMUM);

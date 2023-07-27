@@ -5,12 +5,18 @@ import hexlet.code.Utils;
 public class Progression implements Game {
 
 
-
+    /**
+     * @return возвращает правила игры
+     */
+    @Override
     public String getRules() {
         return "What number is missing in the progression?";
     }
 
-
+    /**
+     * @return задаёт вопрос игры и возвращает строку с ответом
+     */
+    @Override
     public String getQuestionAndAnswer() {
         final int sizeSequence = 10;
         final int incMin = 1;

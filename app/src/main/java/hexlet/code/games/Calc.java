@@ -7,12 +7,19 @@ import java.util.Arrays;
 public class Calc implements Game {
 
 
-
+    /**
+     * @return возвращает правила игры
+     */
+    @Override
     public String getRules() {
         return "What is the result of the expression?";
     }
 
 
+    /**
+     * @return задаёт вопрос игры и возвращает строку с ответом
+     */
+    @Override
     public String getQuestionAndAnswer() {
         var signsArray = Arrays.asList("+", "-", "*");
         var operationalSign = signsArray.get(Utils.getRandomNumber(signsArray.size()));

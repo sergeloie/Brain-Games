@@ -31,7 +31,7 @@ public class Calc implements Game {
             case ("+") -> firstNumber + secondNumber;
             case ("-") -> firstNumber - secondNumber;
             case ("*") -> firstNumber * secondNumber;
-            default -> throw new IllegalStateException("Unexpected value: " + operationalSign);
+            default -> throw new RuntimeException("Unexpected value: " + operationalSign);
         };
         System.out.printf("Question: %d %s %d%n", firstNumber, operationalSign, secondNumber);
         System.out.print("Your answer: ");

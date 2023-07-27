@@ -5,7 +5,7 @@ import hexlet.code.Utils;
 
 public class GCD implements Game {
 
-    private static int computeGCD(int x, int y) {
+    private int computeGCD(int x, int y) {
         int m = Math.max(x, y);
         int n = Math.min(x, y);
         while (m % n != 0) {

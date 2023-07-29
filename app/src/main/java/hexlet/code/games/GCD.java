@@ -25,15 +25,17 @@ public class GCD implements Game {
         return "Find the greatest common divisor of given numbers.";
     }
 
-
     /**
-     * @return задаёт вопрос игры и возвращает строку с ответом
+     * @return возвращает массив строк с вопросом и ответом
      */
     @Override
-    public String getQuestionAndAnswer() {
+    public String[] getQuestionAndAnswer() {
+        String[] qaa = new String[2];
         int a = Utils.getRandomNumber(1, Engine.SUPREMUM);
         int b = Utils.getRandomNumber(1, Engine.SUPREMUM);
-        System.out.printf("Question: %d %d%nYour answer: ", a, b);
-        return String.valueOf(computeGCD(a, b));
+//        System.out.printf("Question: %d %d%nYour answer: ", a, b);
+        qaa[0] = "Question: " + a + " " + b + "\n" + "Your answer: ";
+        qaa[1] = String.valueOf(computeGCD(a, b));
+        return qaa;
     }
 }

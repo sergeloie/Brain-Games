@@ -5,6 +5,9 @@ public interface Game {
     String getRules();
 
 
-    String getQuestionAndAnswer();
+    /**
+     * @return возвращает массив строк с вопросом и ответом
+     */
+    String[] getQuestionAndAnswer();
 
 }

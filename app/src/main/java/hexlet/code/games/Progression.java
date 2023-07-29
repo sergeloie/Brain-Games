@@ -4,11 +4,11 @@ import hexlet.code.Utils;
 
 public class Progression implements Game {
 
-    public static final int sizeSequence = 10;
-    public static final int incMin = 1;
-    public static final int incMax = 5;
-    public static final int beginMin = 10;
-    public static final int beginMax = 30;
+    public static final int SIZE_SEQUENCE = 10;
+    public static final int INC_MIN = 1;
+    public static final int INC_MAX = 5;
+    public static final int BEGIN_MIN = 10;
+    public static final int BEGIN_MAX = 30;
 
 
     /**
@@ -20,18 +20,18 @@ public class Progression implements Game {
     }
 
     /**
-     * @return задаёт вопрос игры и возвращает строку с ответом
+     * @return возвращает массив строк с вопросом и ответом
      */
     @Override
-    public String getQuestionAndAnswer() {
-
+    public String[] getQuestionAndAnswer() {
+        String[] qaa = new String[2];
         var stringProg = new StringBuilder();
-        int gap = Utils.getRandomNumber(0, sizeSequence - 1);
-        int increment = Utils.getRandomNumber(incMin, incMax);
-        int begin = Utils.getRandomNumber(beginMin, beginMax);
-        int[] progArray = new int[sizeSequence];
+        int gap = Utils.getRandomNumber(0, SIZE_SEQUENCE - 1);
+        int increment = Utils.getRandomNumber(INC_MIN, INC_MAX);
+        int begin = Utils.getRandomNumber(BEGIN_MIN, BEGIN_MAX);
+        int[] progArray = new int[SIZE_SEQUENCE];
         stringProg.append("Question:");
-        for (int i = 0; i < sizeSequence; i++) {
+        for (int i = 0; i < SIZE_SEQUENCE; i++) {
             progArray[i] = begin + increment * i;
             if (i == gap) {
                 stringProg.append(" ..");
@@ -42,7 +42,8 @@ public class Progression implements Game {
         }
         stringProg.append("%n");
         stringProg.append("Your answer: ");
-        System.out.printf(stringProg.toString());
-        return String.valueOf(progArray[gap]);
+        qaa[0] = stringProg.toString();
+        qaa[1] = String.valueOf(progArray[gap]);
+        return qaa;
     }
 }

@@ -17,10 +17,11 @@ public class Calc implements Game {
 
 
     /**
-     * @return задаёт вопрос игры и возвращает строку с ответом
+     * @return возвращает массив строк с вопросом и ответом
      */
     @Override
-    public String getQuestionAndAnswer() {
+    public String[] getQuestionAndAnswer() {
+        String[] qaa = new String[2];
         var signsArray = Arrays.asList("+", "-", "*");
         var operationalSign = signsArray.get(Utils.getRandomNumber(signsArray.size()));
         int firstNumber = Utils.getRandomNumber(Engine.SUPREMUM);
@@ -33,8 +34,9 @@ public class Calc implements Game {
             case ("*") -> firstNumber * secondNumber;
             default -> throw new RuntimeException("Unexpected value: " + operationalSign);
         };
-        System.out.printf("Question: %d %s %d%n", firstNumber, operationalSign, secondNumber);
-        System.out.print("Your answer: ");
-        return String.valueOf(calcAnswer);
+
+        qaa[0] = "Question: " + firstNumber + " " + operationalSign + " " + secondNumber + "\n" + "Your answer: ";
+        qaa[1] = String.valueOf(calcAnswer);
+        return qaa;
     }
 }

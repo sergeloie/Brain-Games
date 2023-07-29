@@ -13,11 +13,17 @@ public class Even implements Game {
         return "Answer 'yes' if the number is even, otherwise answer 'no'.";
     }
 
-
+    /**
+     * @return возвращает true, если число чётное и false - если нечётное
+     */
     public boolean isEven(int x) {
         return x % 2 == 0;
     }
 
+
+    /**
+     * @return возвращает массив строк с вопросом и ответом
+     */
     @Override
     public String[] getQuestionAndAnswer() {
         String[] qaa = new String[2];

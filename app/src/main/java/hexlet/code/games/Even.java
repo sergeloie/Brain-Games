@@ -19,10 +19,13 @@ public class Even implements Game {
     @Override
     public String getQuestionAndAnswer() {
         int x = Utils.getRandomNumber(Engine.SUPREMUM);
-        boolean evenCheck = (x % 2 == 0);
         System.out.println("Question: " + x);
         System.out.print("Your answer: ");
-        return evenCheck ? "yes" : "no";
+        return isEven(x) ? "yes" : "no";
+    }
+
+    public boolean isEven(int x) {
+        return x % 2 == 0;
     }
 
 }

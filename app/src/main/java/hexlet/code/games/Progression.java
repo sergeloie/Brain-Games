@@ -10,7 +10,6 @@ public class Progression implements Game {
     public static final int BEGIN_MIN = 10;
     public static final int BEGIN_MAX = 30;
 
-
     /**
      * @return возвращает правила игры
      */

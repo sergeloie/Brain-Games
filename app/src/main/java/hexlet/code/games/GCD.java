@@ -16,7 +16,6 @@ public class GCD implements Game {
         return n;
     }
 
-
     /**
      * @return возвращает правила игры
      */
@@ -33,7 +32,6 @@ public class GCD implements Game {
         String[] qaa = new String[2];
         int a = Utils.getRandomNumber(1, Engine.SUPREMUM);
         int b = Utils.getRandomNumber(1, Engine.SUPREMUM);
-//        System.out.printf("Question: %d %d%nYour answer: ", a, b);
         qaa[0] = "Question: " + a + " " + b + "\n" + "Your answer: ";
         qaa[1] = String.valueOf(computeGCD(a, b));
         return qaa;

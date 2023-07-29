@@ -6,7 +6,6 @@ import java.util.Arrays;
 
 public class Calc implements Game {
 
-
     /**
      * @return возвращает правила игры
      */
@@ -14,7 +13,6 @@ public class Calc implements Game {
     public String getRules() {
         return "What is the result of the expression?";
     }
-
 
     /**
      * @return возвращает массив строк с вопросом и ответом

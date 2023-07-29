@@ -17,7 +17,6 @@ public class Prime implements Game {
         return true;
     }
 
-
     /**
      * @return возвращает правила игры
      */
@@ -25,7 +24,6 @@ public class Prime implements Game {
     public String getRules() {
         return "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     }
-
 
     /**
      * @return возвращает массив строк с вопросом и ответом

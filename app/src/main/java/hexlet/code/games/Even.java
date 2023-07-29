@@ -21,7 +21,6 @@ public class Even implements Game {
         return x % 2 == 0;
     }
 
-
     /**
      * @return возвращает массив строк с вопросом и ответом
      */
@@ -34,7 +33,4 @@ public class Even implements Game {
         qaa[1] = isEven(x) ? "yes" : "no";
         return qaa;
     }
-
-
 }
-

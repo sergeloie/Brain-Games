@@ -4,6 +4,12 @@ import hexlet.code.Utils;
 
 public class Progression implements Game {
 
+    public static final int sizeSequence = 10;
+    public static final int incMin = 1;
+    public static final int incMax = 5;
+    public static final int beginMin = 10;
+    public static final int beginMax = 30;
+
 
     /**
      * @return возвращает правила игры
@@ -18,11 +24,7 @@ public class Progression implements Game {
      */
     @Override
     public String getQuestionAndAnswer() {
-        final int sizeSequence = 10;
-        final int incMin = 1;
-        final int incMax = 5;
-        final int beginMin = 10;
-        final int beginMax = 30;
+
         var stringProg = new StringBuilder();
         int gap = Utils.getRandomNumber(0, sizeSequence - 1);
         int increment = Utils.getRandomNumber(incMin, incMax);

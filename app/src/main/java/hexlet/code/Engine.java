@@ -28,22 +28,18 @@ public class Engine {
     }
 
     public static void playGameById(int idGame) {
-        final int even = 2;
-        final int calc = 3;
-        final int gcd = 4;
-        final int progression = 5;
-        final int prime = 6;
+
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
         String userName;
         userName = scan.nextLine();
         System.out.println("Hello, " + userName);
         Game game1 = switch (idGame) {
-            case (even) -> new Even();
-            case (calc) -> new Calc();
-            case (gcd) -> new GCD();
-            case (progression) -> new Progression();
-            case (prime) -> new Prime();
+            case (App.even) -> new Even();
+            case (App.calc) -> new Calc();
+            case (App.gcd) -> new GCD();
+            case (App.progression) -> new Progression();
+            case (App.prime) -> new Prime();
             default -> throw new RuntimeException("Unexpected value: " + idGame);
         };
         System.out.println(game1.getRules());

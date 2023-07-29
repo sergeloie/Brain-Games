@@ -3,6 +3,12 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class App {
+
+    public static final int even = 2;
+    public static final int calc = 3;
+    public static final int gcd = 4;
+    public static final int progression = 5;
+    public static final int prime = 6;
     public static void main(String[] args) {
 
         System.out.println("Welcome to the Brain Games!");

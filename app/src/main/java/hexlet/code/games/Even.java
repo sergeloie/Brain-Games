@@ -15,6 +15,7 @@ public class Even implements Game {
 
     /**
      * @return возвращает true, если число чётное и false - если нечётное
+     * @param x число, чётность которого проверяем
      */
     public boolean isEven(int x) {
         return x % 2 == 0;

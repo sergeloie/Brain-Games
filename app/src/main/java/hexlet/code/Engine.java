@@ -13,8 +13,7 @@ public class Engine {
     public static void playGame(Game choosenGame) {
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
-        String userName;
-        userName = scan.nextLine();
+        String userName = scan.nextLine();
         System.out.println("Hello, " + userName);
         System.out.println(choosenGame.getRules());
         for (int i = 0; i < NUMBER_OF_ROUNDS; i++) {

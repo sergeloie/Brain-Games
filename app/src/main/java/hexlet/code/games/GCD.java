@@ -32,7 +32,7 @@ public class GCD implements Game {
         String[] qaa = new String[2];
         int a = Utils.getRandomNumber(1, Engine.SUPREMUM);
         int b = Utils.getRandomNumber(1, Engine.SUPREMUM);
-        qaa[Engine.QUESTION] = "Question: " + a + " " + b + "\n" + "Your answer: ";
+        qaa[Engine.QUESTION] = a + " " + b;
         qaa[Engine.ANSWER] = String.valueOf(computeGCD(a, b));
         return qaa;
     }

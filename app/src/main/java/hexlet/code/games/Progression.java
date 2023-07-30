@@ -30,7 +30,6 @@ public class Progression implements Game {
         int increment = Utils.getRandomNumber(INC_MIN, INC_MAX);
         int begin = Utils.getRandomNumber(BEGIN_MIN, BEGIN_MAX);
         int[] progArray = new int[SIZE_SEQUENCE];
-        stringProg.append("Question:");
         for (int i = 0; i < SIZE_SEQUENCE; i++) {
             progArray[i] = begin + increment * i;
             if (i == gap) {
@@ -40,9 +39,7 @@ public class Progression implements Game {
                 stringProg.append(progArray[i]);
             }
         }
-        stringProg.append("%n");
-        stringProg.append("Your answer: ");
-        qaa[Engine.QUESTION] = stringProg.toString();
+        qaa[Engine.QUESTION] = stringProg.toString().trim();
         qaa[Engine.ANSWER] = String.valueOf(progArray[gap]);
         return qaa;
     }

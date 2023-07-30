@@ -22,7 +22,9 @@ public class Engine {
             String[] questionAndAnswer = choosenGame.getQuestionAndAnswer();
             String correctAnswer = questionAndAnswer[ANSWER];
             String question = questionAndAnswer[QUESTION];
-            System.out.printf(question);
+//            System.out.printf(question);
+            System.out.println("Question: " + question);
+            System.out.print("Your answer: ");
             String userAnswer = scan.nextLine();
             if (userAnswer.equals(correctAnswer)) {
                 System.out.println("Correct!");

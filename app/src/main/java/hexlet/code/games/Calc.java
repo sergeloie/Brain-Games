@@ -33,7 +33,7 @@ public class Calc implements Game {
             default -> throw new RuntimeException("Unexpected value: " + operationalSign);
         };
 
-        qaa[Engine.QUESTION] = "Question: " + firstNumber + " " + operationalSign + " " + secondNumber + "\n" + "Your answer: ";
+        qaa[Engine.QUESTION] = firstNumber + " " + operationalSign + " " + secondNumber;
         qaa[Engine.ANSWER] = String.valueOf(calcAnswer);
         return qaa;
     }

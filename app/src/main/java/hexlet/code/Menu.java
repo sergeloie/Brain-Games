@@ -16,7 +16,7 @@ public class Menu {
     public static final int PRIME = 6;
 
     public static Game chooseGame(int userEnteredNumber) {
-        Game returnedGame = switch (userEnteredNumber) {
+        return switch (userEnteredNumber) {
             case (EVEN) -> new Even();
             case (CALC) -> new Calc();
             case (GCD) -> new GCD();
@@ -24,6 +24,5 @@ public class Menu {
             case (PRIME) -> new Prime();
             default -> throw new RuntimeException("Unexpected value: " + userEnteredNumber);
         };
-        return returnedGame;
     }
 }

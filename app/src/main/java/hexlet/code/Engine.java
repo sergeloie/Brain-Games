@@ -9,6 +9,8 @@ public class Engine {
     private static Scanner scan = new Scanner(System.in);
     private static final int NUMBER_OF_ROUNDS = 3;
     public static final int SUPREMUM = 100;
+    public static final int QUESTION = 0;
+    public static final int ANSWER = 1;
 
     public static void playGame(Game choosenGame) {
         System.out.println("Welcome to the Brain Games!");
@@ -18,8 +20,8 @@ public class Engine {
         System.out.println(choosenGame.getRules());
         for (int i = 0; i < NUMBER_OF_ROUNDS; i++) {
             String[] questionAndAnswer = choosenGame.getQuestionAndAnswer();
-            String correctAnswer = questionAndAnswer[1];
-            String question = questionAndAnswer[0];
+            String correctAnswer = questionAndAnswer[ANSWER];
+            String question = questionAndAnswer[QUESTION];
             System.out.printf(question);
             String userAnswer = scan.nextLine();
             if (userAnswer.equals(correctAnswer)) {

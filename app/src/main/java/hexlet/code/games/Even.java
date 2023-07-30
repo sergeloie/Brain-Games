@@ -28,9 +28,9 @@ public class Even implements Game {
     public String[] getQuestionAndAnswer() {
         String[] qaa = new String[2];
         int x = Utils.getRandomNumber(Engine.SUPREMUM);
-        qaa[0] = ("Question: " + x + "\n");
-        qaa[0] += ("Your answer: ");
-        qaa[1] = isEven(x) ? "yes" : "no";
+        qaa[Engine.QUESTION] = ("Question: " + x + "\n");
+        qaa[Engine.QUESTION] += ("Your answer: ");
+        qaa[Engine.ANSWER] = isEven(x) ? "yes" : "no";
         return qaa;
     }
 }

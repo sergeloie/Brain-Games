@@ -32,8 +32,8 @@ public class Prime implements Game {
     public String[] getQuestionAndAnswer() {
         String[] qaa = new String[2];
         int hiddenNumber = Utils.getRandomNumber(Engine.SUPREMUM);
-        qaa[0] = "Question: " + hiddenNumber + "\n" + "Your answer: ";
-        qaa[1] = isPrime(hiddenNumber) ? "yes" : "no";
+        qaa[Engine.QUESTION] = "Question: " + hiddenNumber + "\n" + "Your answer: ";
+        qaa[Engine.ANSWER] = isPrime(hiddenNumber) ? "yes" : "no";
         return qaa;
     }
 }

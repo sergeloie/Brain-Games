@@ -1,5 +1,6 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Progression implements Game {
@@ -41,8 +42,8 @@ public class Progression implements Game {
         }
         stringProg.append("%n");
         stringProg.append("Your answer: ");
-        qaa[0] = stringProg.toString();
-        qaa[1] = String.valueOf(progArray[gap]);
+        qaa[Engine.QUESTION] = stringProg.toString();
+        qaa[Engine.ANSWER] = String.valueOf(progArray[gap]);
         return qaa;
     }
 }

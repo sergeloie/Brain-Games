@@ -1,31 +1,25 @@
 package hexlet.code.games;
 
-import hexlet.code.Engine;
 import hexlet.code.Utils;
+
+import java.util.Map;
 
 public class Progression implements Game {
 
-    public static final int SIZE_SEQUENCE = 10;
-    public static final int INC_MIN = 1;
-    public static final int INC_MAX = 5;
-    public static final int BEGIN_MIN = 10;
-    public static final int BEGIN_MAX = 30;
+    private final int SIZE_SEQUENCE = 10;
+    private final int INC_MIN = 1;
+    private final int INC_MAX = 5;
+    private final int BEGIN_MIN = 10;
+    private final int BEGIN_MAX = 30;
 
-    /**
-     * @return возвращает правила игры
-     */
     @Override
     public String getRules() {
         return "What number is missing in the progression?";
     }
 
-    /**
-     * @return возвращает массив строк с вопросом и ответом
-     */
     @Override
-    public String[] getQuestionAndAnswer() {
-        String[] qaa = new String[2];
-        var stringProg = new StringBuilder();
+    public Map<String, String> getQuestionAndAnswer() {
+        StringBuilder stringProg = new StringBuilder();
         int gap = Utils.getRandomNumber(0, SIZE_SEQUENCE - 1);
         int increment = Utils.getRandomNumber(INC_MIN, INC_MAX);
         int begin = Utils.getRandomNumber(BEGIN_MIN, BEGIN_MAX);
@@ -39,8 +33,6 @@ public class Progression implements Game {
                 stringProg.append(progArray[i]);
             }
         }
-        qaa[Engine.QUESTION] = stringProg.toString().trim();
-        qaa[Engine.ANSWER] = String.valueOf(progArray[gap]);
-        return qaa;
+        return Map.of(stringProg.toString().trim(), String.valueOf(progArray[gap]));
     }
 }

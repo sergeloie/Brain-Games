@@ -2,15 +2,14 @@ package hexlet.code;
 
 import hexlet.code.games.Game;
 
+import java.util.Map;
 import java.util.Scanner;
 
 public class Engine {
 
-    private static Scanner scan = new Scanner(System.in);
+    private static final Scanner scan = new Scanner(System.in);
     private static final int NUMBER_OF_ROUNDS = 3;
     public static final int SUPREMUM = 100;
-    public static final int QUESTION = 0;
-    public static final int ANSWER = 1;
 
     public static void playGame(Game choosenGame) {
         System.out.println("Welcome to the Brain Games!");
@@ -19,10 +18,9 @@ public class Engine {
         System.out.println("Hello, " + userName);
         System.out.println(choosenGame.getRules());
         for (int i = 0; i < NUMBER_OF_ROUNDS; i++) {
-            String[] questionAndAnswer = choosenGame.getQuestionAndAnswer();
-            String correctAnswer = questionAndAnswer[ANSWER];
-            String question = questionAndAnswer[QUESTION];
-//            System.out.printf(question);
+            Map<String, String> questionAndAnswer = choosenGame.getQuestionAndAnswer();
+            String question = questionAndAnswer.keySet().stream().findFirst().get();
+            String correctAnswer = questionAndAnswer.get(question);
             System.out.println("Question: " + question);
             System.out.print("Your answer: ");
             String userAnswer = scan.nextLine();

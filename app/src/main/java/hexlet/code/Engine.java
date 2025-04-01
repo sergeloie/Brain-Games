@@ -2,7 +2,6 @@ package hexlet.code;
 
 import hexlet.code.games.Game;
 
-import java.util.Map;
 import java.util.Scanner;
 
 public class Engine {
@@ -18,16 +17,14 @@ public class Engine {
         System.out.println("Hello, " + userName);
         System.out.println(choosenGame.getRules());
         for (int i = 0; i < NUMBER_OF_ROUNDS; i++) {
-            Map<String, String> questionAndAnswer = choosenGame.getQuestionAndAnswer();
-            String question = questionAndAnswer.keySet().stream().findFirst().get();
-            String correctAnswer = questionAndAnswer.get(question);
-            System.out.println("Question: " + question);
+            QAA qaa = choosenGame.getQuestionAndAnswer();
+            System.out.println("Question: " + qaa.question());
             System.out.print("Your answer: ");
             String userAnswer = scan.nextLine();
-            if (userAnswer.equals(correctAnswer)) {
+            if (userAnswer.equals(qaa.answer())) {
                 System.out.println("Correct!");
             } else {
-                System.out.printf("'%s' is wrong answer ;(. Correct answer was '%s'.%n", userAnswer, correctAnswer);
+                System.out.printf("'%s' is wrong answer ;(. Correct answer was '%s'.%n", userAnswer, qaa.answer());
                 System.out.printf("Let's try again, %s!%n", userName);
                 System.exit(0);
             }

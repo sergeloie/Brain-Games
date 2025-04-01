@@ -1,9 +1,8 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.QAA;
 import hexlet.code.Utils;
-
-import java.util.Map;
 
 import static hexlet.code.Utils.computeGCD;
 
@@ -15,9 +14,9 @@ public class GCD implements Game {
     }
 
     @Override
-    public Map<String, String> getQuestionAndAnswer() {
+    public QAA getQuestionAndAnswer() {
         int a = Utils.getRandomNumber(1, Engine.SUPREMUM);
         int b = Utils.getRandomNumber(1, Engine.SUPREMUM);
-        return Map.of("%d %d".formatted(a, b), String.valueOf(computeGCD(a, b)));
+        return new QAA("%d %d".formatted(a, b), String.valueOf(computeGCD(a, b)));
     }
 }

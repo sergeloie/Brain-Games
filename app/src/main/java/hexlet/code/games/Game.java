@@ -1,6 +1,6 @@
 package hexlet.code.games;
 
-import java.util.Map;
+import hexlet.code.QAA;
 
 public interface Game {
 
@@ -12,5 +12,5 @@ public interface Game {
     /**
      * @return возвращает массив строк с вопросом и ответом
      */
-    Map<String, String> getQuestionAndAnswer();
+    QAA getQuestionAndAnswer();
 }

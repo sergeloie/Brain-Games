@@ -1,10 +1,10 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.QAA;
 import hexlet.code.Utils;
 
 import java.util.List;
-import java.util.Map;
 
 public class Calc implements Game {
 
@@ -14,7 +14,7 @@ public class Calc implements Game {
     }
 
     @Override
-    public Map<String, String> getQuestionAndAnswer() {
+    public QAA getQuestionAndAnswer() {
         List<String> signsArray = List.of("+", "-", "*");
         String operationalSign = signsArray.get(Utils.getRandomNumber(signsArray.size()));
         int firstNumber = Utils.getRandomNumber(Engine.SUPREMUM);
@@ -26,6 +26,6 @@ public class Calc implements Game {
             case ("*") -> firstNumber * secondNumber;
             default -> throw new RuntimeException("Unexpected value: " + operationalSign);
         };
-        return Map.of("%d %s %d".formatted(firstNumber, operationalSign, secondNumber), String.valueOf(calcAnswer));
+        return new QAA("%d %s %d".formatted(firstNumber, operationalSign, secondNumber), String.valueOf(calcAnswer));
     }
 }

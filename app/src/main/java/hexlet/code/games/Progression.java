@@ -1,8 +1,7 @@
 package hexlet.code.games;
 
+import hexlet.code.QAA;
 import hexlet.code.Utils;
-
-import java.util.Map;
 
 public class Progression implements Game {
 
@@ -18,7 +17,7 @@ public class Progression implements Game {
     }
 
     @Override
-    public Map<String, String> getQuestionAndAnswer() {
+    public QAA getQuestionAndAnswer() {
         StringBuilder stringProg = new StringBuilder();
         int gap = Utils.getRandomNumber(0, SIZE_SEQUENCE - 1);
         int increment = Utils.getRandomNumber(INC_MIN, INC_MAX);
@@ -33,6 +32,6 @@ public class Progression implements Game {
                 stringProg.append(progArray[i]);
             }
         }
-        return Map.of(stringProg.toString().trim(), String.valueOf(progArray[gap]));
+        return new QAA(stringProg.toString().trim(), String.valueOf(progArray[gap]));
     }
 }

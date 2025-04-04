@@ -8,6 +8,8 @@ import java.util.List;
 
 public class Calc implements Game {
 
+
+
     @Override
     public String getRules() {
         return "What is the result of the expression?";
